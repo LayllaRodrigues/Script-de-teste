@@ -7,6 +7,7 @@ describe 'forms' do
 
         click_button 'Login'
 
-        puts find('#flash').visible?
+        expect(find('#flash').visible?).to be true #o expect é a melhor opção dado que tem outros caracteres junto com a msg que vou consultar (area logada)
+        expect(find("#flash").text).to include "Olá, Tony Stark. Você acessou a área logada!" #opção 1
     end
 end
