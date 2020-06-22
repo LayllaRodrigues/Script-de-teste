@@ -6,6 +6,10 @@ describe 'Caixa de seleção', :checkbox do
     it 'marcando uma opção' do
         check('thor')
     end
+    
+    it 'desmarcando uma opção' do #desmarca opções
+        uncheck('antman')
+    end
 
     after(:each)do
         sleep 3
